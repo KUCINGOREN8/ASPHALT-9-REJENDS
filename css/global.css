@@ -1,0 +1,38 @@
+:root {
+  --clr-accent: #fec24e;
+  --clr-s-class: #ff2525;
+  --clr-a-class: #000000;
+  --clr-b-class: #4aff2d;
+  --clr-c-class: #e9f46c;
+  --clr-d-class: #9747ff;
+
+  --fs-small: 0.875rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+
+  --gradient: linear-gradient(135deg, #fac692, var(--clr-accent));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}

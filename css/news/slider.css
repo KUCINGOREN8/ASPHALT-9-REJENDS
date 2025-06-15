@@ -1,0 +1,88 @@
+.slider-container {
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3rem;
+  margin-top: 8rem;
+  padding-bottom: 2rem;
+  scrollbar-width: thin;
+  cursor: pointer;
+}
+
+.slider-container li {
+  flex-shrink: 0;
+  max-width: 45rem;
+  min-width: 20rem;
+  width: 100%;
+}
+
+.slider-container .info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.slider-container img {
+  width: 100%;
+  object-fit: cover;
+  height: 25rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.slider-container h3 {
+  color: white;
+  grid-column: span 2 / span 2;
+  border-bottom: 1px solid var(--clr-accent);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.slider-container p {
+  color: white;
+}
+
+.slider-container .duration {
+  justify-self: end;
+}
+
+.slider-container p span {
+  color: var(--clr-accent);
+  margin-top: 1rem;
+}
+
+.slider-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.slider-indicator .indicator {
+  width: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 50rem;
+  background: gray;
+  transition: 200ms;
+}
+
+.slider-indicator .indicator.active {
+  background: white;
+}
+
+@media (max-width: 500px) {
+  .slider-container .info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .slider-container h3 {
+    grid-column: span 1 / span 1;
+  }
+
+  .slider-container .duration {
+    justify-self: start;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,50 @@
+.sponsors {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.sponsors h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sponsors ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 2rem;
+}
+
+.sponsors ul img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.sponsors .bmw {
+  width: 25%;
+}
+.sponsors .lambo {
+  width: 25%;
+}
+
+.sponsors .pagani {
+  height: 10rem;
+}
+
+.sponsors .porsche {
+  height: 10rem;
+}
+
+@media (max-width: 768px) {
+  .sponsors ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .sponsors ul {
+    grid-template-columns: 1fr;
+  }
+}

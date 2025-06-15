@@ -1,0 +1,92 @@
+.details {
+  display: grid;
+  gap: 2rem;
+}
+
+.details h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.revealer {
+  background: var(--gradient);
+  width: 20rem;
+  transition: 500ms;
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+
+  transform: skewX(-10deg);
+}
+
+.revealer .content {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.revealer .content p {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.revealer .content {
+  font-size: 1.5rem;
+}
+
+.revealer:hover .content {
+  width: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+.revealer img {
+  width: 2rem;
+}
+
+.revealer-2 img { 
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.revealer:hover {
+  width: 100%;
+}
+
+.revealer .hint {
+  visibility: visible;
+  opacity: 1;
+  transition: 200ms;
+
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.revealer:hover .hint {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (max-width: 500px) {
+  .revealer {
+    min-width: 0;
+  }
+
+  .revealer .content p {
+    font-size: var(--fs-medium);
+  }
+}

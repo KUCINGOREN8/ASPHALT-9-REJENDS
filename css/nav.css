@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+  background-color: black;
+}
+
+.navbar .section {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  width: 7.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: rgb(177, 177, 177);
+  position: relative;
+  transition: color 200ms;
+}
+
+.navbar a:not(:has(.logo))::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.3rem;
+  height: 1.5px;
+  background: var(--clr-accent);
+
+  scale: 0 1;
+  transform-origin: right;
+
+  transition: scale 200ms;
+}
+
+.navbar a:not(.on-route):hover::after {
+  scale: 1 1;
+  transform-origin: left;
+}
+
+.navbar button {
+  background: var(--gradient);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.navbar a.on-route {
+  color: white;
+}
+.navbar a:hover:not(.on-route) {
+  color: white;
+}
+
+.navbar .mobile-trigger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .navbar .mobile-trigger {
+    display: flex;
+  }
+
+  .navbar ul {
+    position: absolute;
+    background: rgb(12, 12, 12);
+    left: 0;
+    right: 0;
+    top: 5rem;
+    scale: 0.9;
+    transition: 200ms;
+    z-index: -3;
+    transform-origin: top;
+    visibility: hidden;
+    opacity: 0;
+
+    flex-direction: column;
+    padding: 3rem 0;
+    isolation: isolate;
+  }
+
+  .navbar.open ul {
+    opacity: 1;
+    visibility: visible;
+    scale: 1;
+  }
+}

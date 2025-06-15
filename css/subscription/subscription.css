@@ -1,0 +1,112 @@
+main .bg {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+}
+
+main::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(0, 0, 0, 0.272);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+main {
+  height: 60rem;
+  position: relative;
+}
+
+main .section {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .input {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30rem;
+}
+
+main .input input::placeholder {
+  color: rgb(127, 127, 127);
+}
+main .input input {
+  background: none;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0rem 0.5rem 1rem 0.5rem;
+}
+
+main .input input:focus {
+  outline: none;
+  border-bottom-color: var(--clr-accent);
+}
+
+main .input label {
+  margin-bottom: 0.75rem;
+}
+
+main h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.radio-input-container {
+  color: white;
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  align-self: flex-start;
+}
+
+form .audience {
+  margin-top: 2rem;
+}
+form .audience ul {
+  justify-content: center;
+  color: rgb(154, 153, 153);
+}
+
+.radio-input-container ul {
+  display: flex;
+  color: white;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.subscribe {
+  background: var(--gradient);
+  padding: 0.75rem 2rem;
+  width: 100%;
+  max-width: 30rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.TOS {
+  color: white;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.TOS span {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
